@@ -1,0 +1,37 @@
+{
+  "pages": [
+    "pages/mango/index/index",
+    "pages/member/index/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FB8603",
+    "navigationBarTitleText": "Mango心记+",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#CDCDCD",
+    "selectedColor": "#FB8603",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "position": "bottom",
+    "list": [
+      {
+        "pagePath": "pages/mango/index/index",
+        "text": "心记",
+        "iconPath": "image/icon_home.png",
+        "selectedIconPath": "image/icon_home_sel.png"
+      },
+      {
+        "pagePath": "pages/member/index/index",
+        "text": "我的",
+        "iconPath": "image/icon_mine.png",
+        "selectedIconPath": "image/icon_mine_sel.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": "70000"
+  },
+  "debug": true
+}

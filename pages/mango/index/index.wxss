@@ -1,0 +1,25 @@
+/**
+ * mango页面，index.wxss
+ */
+
+.mango-index-top {
+  height: 90rpx;
+  width: 100%;
+  background-color: #fb8603;
+}
+
+.mango-index-top-loaction {
+  text-align: center;
+}
+
+.mango-index-top-image {
+  height: 80rpx;
+  width: 100%;
+}
+
+.mango-index-top-text::before {
+  content: '查看往期日记';
+  position: center;
+  top: 50%;
+  bottom: 50%;
+}
