@@ -1,8 +1,8 @@
 <!--index.wxml-->
 <view class="container">
   <view class='page-body'>
-    <view class='mango-index-top'>
-      <image class='mango-index-top-image' src='../resources/image_mango_top.png' />
-    </view>
+    <view style='background-color:red;flex-grow:1;height:80rpx;'></view>
+    <view style='background-color:blue;flex-grow:1;height:80rpx;'></view>
+    <view style='background-color:green;flex-grow:1;height:80rpx;'></view>
   </view>
 </view>

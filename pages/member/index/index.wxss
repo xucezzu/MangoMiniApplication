@@ -1,0 +1,13 @@
+.member-body{
+  height: 100%;
+  width: 100%;
+  background-color: #e1e1e1;
+  display: flex;
+}
+
+.member-item{
+  height: 60rpx;
+  width: 100%;
+  padding: 10rpx;
+  margin: 5rpx;
+}
