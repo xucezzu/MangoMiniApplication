@@ -2,10 +2,67 @@
  * mango页面，index.wxss
  */
 
+.mango-index {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.mango-index-edit {
+  position: fixed;
+  bottom: 10rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100px;
+}
+
+.mango-scroll-body {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
 .mango-index-top {
-  height: 90rpx;
+  height: 160rpx;
   width: 100%;
   background-color: #fb8603;
+  margin-top: 5rpx;
+}
+
+.mango-index-top-content {
+  height: 100%;
+  width: 300rpx;
+}
+
+.mango-index-top-content-text {
+  color: #fff;
+}
+
+.mango-index-swiper {
+  height: 280rpx;
+  width: 100%;
+  background-color: #6c6;
+}
+
+.mango-index-list {
+  width: 100%;
+}
+
+.mango-index-list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30rpx;
+  border-bottom: 2rpx solid #ddd;
+  position: relative;
+}
+
+.test-background-color {
+  background-color: #6c6;
 }
 
 .mango-index-top-loaction {
@@ -24,4 +81,6 @@
   bottom: 50%;
 }
 
-
+.display-block {
+  display: block;
+}

@@ -1,8 +1,44 @@
 <!--index.wxml-->
-<view class="container">
-  <view class='page-body'>
-    <view style='background-color:red;flex-grow:1;height:80rpx;'></view>
-    <view style='background-color:blue;flex-grow:1;height:80rpx;'></view>
-    <view style='background-color:green;flex-grow:1;height:80rpx;'></view>
-  </view>
+<view class="mango-index">
+  <scroll-view class='mango-scroll-body' scroll-top='{{scrollTop}}' upper-threshold='10' scroll-x='false'>
+    <!-- 顶部的布局 -->
+    <view id='mango-view-top' class='mango-index-top' style='display:flex; justify-content:space-between'>
+      <view id='mango-view-top-date' class='mango-index-top-content' style='display:flex; flex-direction:row'>
+        <text class='mango-index-top-content-text' style='font-size:90rpx; margin-left:20rpx; display:flex; align-items:center'>{{nowDate}}</text>
+        <view class='mango-index-top-content' style='display:flex; align-items:center; margin-left:10rpx;'>
+          <view>
+            <text class='mango-index-top-content-text display-block' style='font-size:25rpx;'>{{nowWeek}}</text>
+            <text class='mango-index-top-content-text display-block' style='font-size:25rpx;'>{{nowMonth}}</text>
+          </view>
+        </view>
+      </view>
+      <view id='mango-view-top-name' class='mango-index-top-content' style='display:flex; align-items:center; justify-content:flex-end;'>
+        <view style='margin-right:20rpx;'>
+          <text class='mango-index-top-content-text display-block' style='font-size:45rpx;'>{{babyName}}</text>
+          <text class='mango-index-top-content-text display-block' style='font-size:25rpx;'>已出生{{babyBirthday}}天</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 广告栏布局 -->
+    <swiper class='mango-index-swiper' indicator-dots='true' autoplay='true' indicator-active-color='#fb8603'>
+      <swiper-item>11</swiper-item>
+      <swiper-item>12</swiper-item>
+      <swiper-item>13</swiper-item>
+    </swiper>
+
+     <!-- 显示当前的前七篇文章 -->
+     <view class='mango-index-list'>
+      <block wx:for='{{testData.data}}' wx:key='item.id'>
+        <view class='mango-index-list-item'>
+          <text>{{item.content}}</text>
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+</view>
+
+<!-- 编辑按钮 -->
+<view class='mango-index-edit'>
+  <image style='width: 200rpx; height:200rpx;' src='../../mango/resources/image_mango_edit.png'></image>
 </view>

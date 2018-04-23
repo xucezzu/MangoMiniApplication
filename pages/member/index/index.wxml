@@ -1,25 +1,9 @@
 <!--index.wxml-->
 <view class="container">
-  <scroll-view scroll-y class='member-body' upper-threshold='40' >
-    <view class='member-item'>1</view>
-    <view class='member-item'>2</view>
-    <view class='member-item'>3</view>
-    <view class='member-item'>4</view>
-    <view class='member-item'>5</view>
-    <view class='member-item'>6</view>
-    <view class='member-item'>7</view>
-    <view class='member-item'>8</view>
-    <view class='member-item'>9</view>
-    <view class='member-item'>10</view>
-    <view class='member-item'>1</view>
-    <view class='member-item'>2</view>
-    <view class='member-item'>3</view>
-    <view class='member-item'>4</view>
-    <view class='member-item'>5</view>
-    <view class='member-item'>6</view>
-    <view class='member-item'>7</view>
-    <view class='member-item'>8</view>
-    <view class='member-item'>9</view>
-    <view class='member-item'>10</view>
-  </scroll-view>
+  <view class='member-body'>
+    <view class='member-body-avatar-background' style='background-image: url(../../member/resources/icon_avatar_bg.png); background-size: contain;'>
+      <text class='member-body-user-name'>小策子</text>
+    </view>
+    <view class='member-body-content'></view>
+  </view>
 </view>

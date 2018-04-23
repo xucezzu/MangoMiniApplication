@@ -2,25 +2,68 @@
 // 首页逻辑
 
 var app = getApp()
+var diaryList
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    color: 'red',
-    text: 'Name',
-    message: 'I Love You ...',
-    id: 0,
-    longitude:'',
-    latitude:'',
+    scrollTop: 600,
+    nowDate:17,
+    nowWeek:'星期二',
+    nowMonth:'04月',
+    babyName:'Mango',
+    babyBirthday: 100,
+    testData:{
+      "data":[
+        {
+          "id": 1,
+          "content":"宝宝今天笑了，看着他开心的笑，我的心被融化了！",
+          "time":"今天"
+        },
+        {
+          "id": 2,
+          "content": "宝宝今天笑了，看着他开心的笑，我的心被融化了！",
+          "time": "昨天"
+        },
+        {
+          "id": 3,
+          "content": "宝宝今天笑了，看着他开心的笑，我的心被融化了！",
+          "time": "2018-04-15"
+        },
+        {
+          "id": 4,
+          "content": "宝宝今天笑了，看着他开心的笑，我的心被融化了！",
+          "time": "2018-04-14"
+        },
+        {
+          "id": 5,
+          "content": "宝宝今天笑了，看着他开心的笑，我的心被融化了！",
+          "time": "2018-04-13"
+        },
+        {
+          "id": 6,
+          "content": "宝宝今天笑了，看着他开心的笑，我的心被融化了！",
+          "time": "2018-04-12"
+        },
+        {
+          "id": 7,
+          "content": "宝宝今天笑了，看着他开心的笑，我的心被融化了！",
+          "time": "今2018-04-11"
+        },
+      ]
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    //页面初始化
+    this.setData({
+      diaryList:diaryList
+    })
   },
 
   /**
