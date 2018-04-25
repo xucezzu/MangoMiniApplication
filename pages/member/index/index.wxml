@@ -4,6 +4,22 @@
     <view class='member-body-avatar-background' style='background-image: url(../../member/resources/icon_avatar_bg.png); background-size: contain;'>
       <text class='member-body-user-name'>小策子</text>
     </view>
-    <view class='member-body-content'></view>
+    <view class='member-body-content'>
+      <!-- 信息管理 -->
+      <view class='member-body-content-item'>
+        <view class='member-body-content-item-image'></view>
+        <text class='member-body-content-item-font'>信息管理</text>
+      </view>
+      <!-- 消息管理 -->
+      <view class='member-body-content-item'>
+        <view class='member-body-content-item-image'></view>
+        <text class='member-body-content-item-font'>消息管理</text>
+      </view>
+      <!-- 推广分享 -->
+      <view class='member-body-content-item'>
+        <view class='member-body-content-item-image'></view>
+        <text class='member-body-content-item-font'>推广分享</text>
+      </view>
+    </view>
   </view>
 </view>

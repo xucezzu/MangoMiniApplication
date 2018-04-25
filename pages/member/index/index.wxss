@@ -26,7 +26,31 @@
 
 .member-body-content{
   display: flex;
+  flex-direction: column;
   justify-content: center;
   width: 500rpx;
   height: 400rpx;
+  margin-top: 30rpx;
+}
+
+.member-body-content-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 20rpx;
+  padding: 15rpx;
+}
+
+.member-body-content-item-image{
+  background-color: #fb8603;
+  width: 10rpx;
+  height: 40rpx;
+  margin-right: 25rpx;
+}
+
+.member-body-content-item-font{
+  color: #636363;
+  font-size: 28rpx;
+  margin-left: 25rpx;
+  margin-top: 2rpx;
 }
