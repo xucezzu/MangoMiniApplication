@@ -1,0 +1,93 @@
+.info-view-show{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.info-view-show-none-show{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: url(http://121.43.103.69/media/mango-mini/image_info_bg.png);
+  background-size: 100% 100%;
+  width: 100%;
+  height: 154rpx;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  margin-top: 25rpx;
+}
+
+.info-view-show-none-hide{
+  display: none;
+}
+
+.info-view-show-none-image{
+  width: 30px;
+  height: 30px;
+}
+
+.info-view-show-none-content{
+  font-size: 30rpx;
+  color: #FB8603;
+  margin-left: 15rpx;
+}
+
+.info-view-show-exist-show{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 15rpx;
+  background-color: #ffffff;
+}
+
+.info-view-show-exist-hide{
+  display: none;
+}
+
+.info-view-show-exist-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+  height: 132rpx;
+}
+
+.info-view-show-picker{
+  width: 100%;
+}
+
+.info-view-show-exist-item-left{
+  font-size: 30rpx;
+  color: #FB8603;
+  margin-left: 15rpx;
+}
+
+.info-view-show-exist-item-right{
+  font-size: 30rpx;
+  color: #FB8603;
+  margin-right: 15rpx;
+}
+
+.info-view-show-exist-line{
+  display: flex;
+  background-color: #e2e2e2;
+  width: 100%;
+  height: 2rpx;
+}
+
+.info-view-show-exist-image{
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 15rpx;
+  border: 0 solid #fff000;
+  border-radius: 100rpx;
+}

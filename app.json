@@ -1,7 +1,9 @@
 {
   "pages": [
+    "pages/mango/index/index",
     "pages/member/index/index",
-    "pages/mango/index/index"
+    "pages/member/information/information",
+    "pages/member/message/message"
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -1,22 +1,28 @@
 <!--index.wxml-->
 <view class="container">
   <view class='member-body'>
-    <view class='member-body-avatar-background' style='background-image: url(../../member/resources/icon_avatar_bg.png); background-size: contain;'>
-      <text class='member-body-user-name'>小策子</text>
+    <!-- 头像信息 -->
+    <view class='member-body-avatar-background' style="width: 400rpx; heigth: 400rpx; background-image: url('http://121.43.103.69/media/mango-mini/image_member_avatar_bg.png'); background-size: 100% 100%">
+      <image src="{{userAvatarUrl}}" class='member-body-avatar' mode='aspectFit'></image>
     </view>
+    <!-- 用户昵称 -->
+    <view class='member-body-user-name-view'>
+      <text class='member-body-user-name'>{{userNickName}}</text>
+    </view>
+    <!-- 操作列表 -->
     <view class='member-body-content'>
       <!-- 信息管理 -->
-      <view class='member-body-content-item'>
+      <view class='member-body-content-item' bindtap='infoToNextPage'>
         <view class='member-body-content-item-image'></view>
         <text class='member-body-content-item-font'>信息管理</text>
       </view>
       <!-- 消息管理 -->
-      <view class='member-body-content-item'>
+      <view class='member-body-content-item' bindtap='messToNextPage'>
         <view class='member-body-content-item-image'></view>
         <text class='member-body-content-item-font'>消息管理</text>
       </view>
       <!-- 推广分享 -->
-      <view class='member-body-content-item'>
+      <view class='member-body-content-item' bindtap='shareToNextPage'>
         <view class='member-body-content-item-image'></view>
         <text class='member-body-content-item-font'>推广分享</text>
       </view>

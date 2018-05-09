@@ -10,17 +10,33 @@
 
 .member-body-avatar-background {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   width: 400rpx;
   height: 400rpx;
-  background-repeat: no-repeat;
   margin-top: 80rpx;
+}
+
+.member-body-avatar{
+  width: 160rpx;
+  height: 160rpx;
+  border: 2px solid #ffffff;
+  border-radius: 160rpx;
+  background-color: #ffffff;
+}
+
+.member-body-user-name-view{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .member-body-user-name{
   font-size: 25rpx;
-  margin-bottom:20rpx;
   color: #636363
 }
 
@@ -30,7 +46,6 @@
   justify-content: center;
   width: 500rpx;
   height: 400rpx;
-  margin-top: 30rpx;
 }
 
 .member-body-content-item{
@@ -53,4 +68,11 @@
   font-size: 28rpx;
   margin-left: 25rpx;
   margin-top: 2rpx;
+}
+
+.member-body-message-image-warn{
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: -12rpx;
+  margin-top: -10rpx;
 }
