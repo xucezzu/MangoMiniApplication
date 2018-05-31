@@ -2,7 +2,9 @@
  * Author：徐长策
  * 作用：小程序逻辑层
  */
-let loginUrl = 'http://121.43.103.69:9988/miniMAppUserLoginCode/'
+const loginUrl = 'http://121.43.103.69:9988/miniMAppUserLoginCode/'
+const baseUrl = 'http://121.43.103.69:9988/'
+const baseResImgUrl = 'http://121.43.103.69/media/mango-mini/'
 
 App({
 
@@ -154,7 +156,10 @@ App({
    * 全局变量
    */
   globalData: {
+    baseUrl: baseUrl,
+    baseResImgUrl: baseResImgUrl,
     userInfo: null,
     userOpenId: null,
+    userId: null,
   }
 })

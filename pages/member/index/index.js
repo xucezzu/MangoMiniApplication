@@ -20,6 +20,8 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log('[member/index.js] onLoad...')
+
     if (app.globalData.userInfo) {
       console.log('[member/index.js]用户昵称1')
       // 上传用户数据到服务器
@@ -56,28 +58,28 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+    console.log('[member/index.js] onReady...')
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    console.log('[member/index.js] onShow...')
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-
+    console.log('[member/index.js] onHide...')
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-
+    console.log('[member/index.js] onUnload...')
   },
 
   /**
@@ -106,7 +108,7 @@ Page({
    */
   infoToNextPage: function (event) {
     wx.navigateTo({
-      url: '../../member/information/information',
+      url: '../../member/information/information?id=1',
       success: function () {
         console.log('[member/index.js]跳转成功...')
       },

@@ -41,7 +41,7 @@ const formatNumber = n => {
 }
 
 /**
- * 异步处理
+ * 同步处理
  */
 function wxPromisify(fn) {
   return function (obj = {}) {
@@ -54,7 +54,7 @@ function wxPromisify(fn) {
         reject(res)
       }
 
-      fn(obj)
+      fn(obj) //执行函数，obj为传入函数的参数
     })
   }
 }

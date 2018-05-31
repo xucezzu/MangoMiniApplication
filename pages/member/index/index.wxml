@@ -14,10 +14,10 @@
       <!-- 信息管理 -->
       <view class='member-body-content-item' bindtap='infoToNextPage'>
         <view class='member-body-content-item-image'></view>
-        <text class='member-body-content-item-font'>信息管理</text>
+        <text class='member-body-content-item-font'>宝宝信息</text>
       </view>
       <!-- 消息管理 -->
-      <view class='member-body-content-item' bindtap='messToNextPage'>
+      <view class='member-body-content-item' bindtap='msgToNextPage'>
         <view class='member-body-content-item-image'></view>
         <text class='member-body-content-item-font'>消息管理</text>
       </view>

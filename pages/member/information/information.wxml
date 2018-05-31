@@ -1,19 +1,14 @@
 <!-- information.wxml -->
 <view class='container'>
   <view class="info-view-show">
-    <!-- 内容为空时展示 -->
-    <view class="{{isShowInfoView?'info-view-show-none-show':'info-view-show-none-hide'}}">
-      <image class='info-view-show-none-image' src='../../member/resources/icon_info_add.png' mode='aspectFill'></image>
-      <text class='info-view-show-none-content'>新增Baby信息</text>
-    </view>
-    <!-- 有内容时的展示 -->
-    <view class="{{ShowInfoView?'info-view-show-exist-hide':'info-view-show-exist-show'}}">
+    <!-- 内容展示 -->
+    <view class='info-view-show-exist-show'>
       <!-- 展示Baby姓名 -->
       <view class='info-view-show-exist-item' bindtap='showBabyNameDialog'>
         <text class='info-view-show-exist-item-left'>Baby姓名:</text>
-        <text class='info-view-show-exist-item-right'>Mango</text>
+        <text class='info-view-show-exist-item-right'>{{babyName}}</text>
       </view>
-      <view class='info-view-show-exist-line'></view>
+      <view class='info-view-show-exist-line' />
       <!-- 展示baby出生日期 -->
       <picker class='info-view-show-picker' mode='date' value='{{date}}' start='2010-01-01' end='2030-12-31' bindchange='bindDateChange'>
         <view class='info-view-show-exist-item'>
@@ -21,19 +16,19 @@
           <text class='info-view-show-exist-item-right'>{{date}}</text>
         </view>
       </picker>
-      <view class='info-view-show-exist-line'></view>
+      <view class='info-view-show-exist-line' />
       <!-- 展示Baby的性别 -->
       <view class='info-view-show-exist-item' bindtap='showBabySexDialog'>
         <text class='info-view-show-exist-item-left'>Baby性别:</text>
-        <text class='info-view-show-exist-item-right'>男</text>
+        <text class='info-view-show-exist-item-right'>{{gender}}</text>
       </view>
-      <view class='info-view-show-exist-line'></view>
-      <!-- 展示Baby的性别 -->
+      <view class='info-view-show-exist-line' />
+      <!-- 展示Baby的头像 -->
       <view class='info-view-show-exist-item'>
         <text class='info-view-show-exist-item-left'>Baby头像:</text>
-        <image src='http://121.43.103.69/media/mango-mini/icon_app_mini.png' class='info-view-show-exist-image'></image>
+        <image src='{{imageUrl}}' class='info-view-show-exist-image'></image>
       </view>
-      <view class='info-view-show-exist-line'></view>
+      <view class='info-view-show-exist-line' />
     </view>
   </view>
 
@@ -48,30 +43,36 @@
       </view>
       <view class="modal-content">
         <view class="modal-input">
-          <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="inputChange" class="input" placeholder="请输入姓名"></input>
+          <input placeholder-class="input-placeholder" adjust-position="true" type="text" maxlength="10" bindinput="inputChangeBabyName" class="input" placeholder="请输入姓名" confirm-type="send"></input>
         </view>
       </view>
       <view class="modal-footer">
-        <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消 </view>
-        <view class="btn-confirm" bindtap="onConfirm" data-status="confirm">确定 </view>
+        <view class="btn-cancel" bindtap="onCancelBabyName" data-status="cancel">取消 </view>
+        <view class="btn-confirm" bindtap="onConfirmBabyName" data-status="confirm">确定 </view>
       </view>
     </view>
   </view>
 
   <!-- 弹窗 选择性别 -->
   <!-- 先设置一个蒙层 -->
-  <!-- 弹框就在蒙层上进行操作，但不能属于该蒙层，弹框View与蒙层View属于同一级-->
-   <view class="modal-input-mask" bindtap="hideModal" catchtouchmove="true" wx:if="{{showBabySexModal}}"></view>
+  <!-- 弹框就在蒙层上进行操作，但不能属于该蒙层，弹框View与蒙层View属于同一级 -->
+  <view class="modal-input-mask" bindtap="hideModal" catchtouchmove="true" wx:if="{{showBabySexModal}}"></view>
   <view class='modal-dialog-bg' wx:if="{{showBabySexModal}}">
     <view class="modal-dialog">
       <view class="modal-title">
         <text class='modal-title-text'>修改姓名</text>
       </view>
       <view class="modal-content">
-        <view class="modal-input">
-          <input placeholder-class="input-holder" type="text" maxlength="10" bindinput="inputChange" class="input" placeholder="请输入姓名"></input>
-        </view>
+        <radio-group class='modal-radio-group' bindchange='changeBabyGender'>
+          <label class='modal_radio' wx:for='{{genderItems}}'>
+            <radio value='{{item.value}}' checked='{{item.checked}}'>{{item.name}}</radio>
+          </label>
+        </radio-group>
+      </view>
+      <view class="modal-footer">
+        <view class="btn-cancel" bindtap="onCancelBabySex" data-status="cancel">取消 </view>
+        <view class="btn-confirm" bindtap="onConfirmBabySex" data-status="confirm">确定 </view>
       </view>
     </view>
-  </view> 
+  </view>
 </view>
